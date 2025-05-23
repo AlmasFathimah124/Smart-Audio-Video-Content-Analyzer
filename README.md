@@ -149,32 +149,22 @@ This tool is ideal for anyone who needs to monitor and control the flow of sensi
       v
       # Display in GUI, export as JSON
 
+## Installation & Setup
+-Prerequisites-
+Python 3.8+
+FFmpeg (for audio/video extraction)
+jupyter: pip install ffmpeg
 
-## Installation & Dependencies
-**Install Required Packages**
- -Option 1: In Your Terminal or Command Prompt
- pip install sounddevice scipy numpy whisper deepmultilingualpunctuation transformers torch transformers ffmpeg
- -Option 2: Directly in a Jupyter Notebook Cell
- -!pip install sounddevice scipy numpy whisper deepmultilingualpunctuation transformers torch transformers
- -Note:
-  -tkinter is usually bundled with Python. If you get an import error, install it via your system’s package manager.
- -FFmpeg Installation
-  -FFmpeg is required for audio/video processing.
--check 
- -ffmpeg -version
- 
-**Model Downloads**
-On first run, these models are downloaded automatically:
-Whisper – Speech Recognition
-FLAN-T5 – Text Classification
-Toxic-BERT – Toxicity Detection
-DeepMultilingualPunctuation – Punctuation Restoration
+-Install Python Dependencies
+It’s recommended to use a virtual environment:
 
--Model not downloading?
- -Check your internet connection.
--tkinter error?
- -Try running your script outside Jupyter.
- 
+-Model Downloads
+The first time you run the app, Hugging Face and Whisper models will be downloaded automatically:
+Whisper ASR: "base" model (can be changed to "medium" or "large" for better accuracy)
+FLAN-T5: "google/flan-t5-large"
+Toxic-BERT: "unitary/toxic-bert"
+DeepMultilingualPunctuation
+
 **Usage Guide**
 🚀 Usage Guide (Jupyter Notebook)
 Follow these steps to analyze audio or video content for sensitive topics and toxicity using EchoFilter in a Jupyter notebook:
