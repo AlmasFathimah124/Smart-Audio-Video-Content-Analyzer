@@ -165,7 +165,7 @@ FLAN-T5: "google/flan-t5-large"
 Toxic-BERT: "unitary/toxic-bert"
 DeepMultilingualPunctuation
 
-**Usage Guide**
+## Usage Guide
 Usage Guide (Jupyter Notebook)
 Follow these steps to analyze audio or video content for sensitive topics and toxicity using EchoFilter in a Jupyter notebook:
 
