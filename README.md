@@ -61,92 +61,89 @@ This tool is ideal for anyone who needs to monitor and control the flow of sensi
 
 ## System Architecture & Design
 **High-Level Workflow**
-System Workflow
-Input Acquisition
-
-Attach Audio/Video File: Users can select files in various formats (.mp3, .wav, .mp4, etc.).
-
-Record Live Audio: Users can record audio directly from their microphone.
-
-Audio Extraction & Preprocessing
-
-FFmpeg: Extracts and converts audio from video files to a standardized format for transcription.
-
-Speech-to-Text (ASR)
-
-Whisper Model: Transcribes audio to text locally, ensuring privacy and supporting multiple languages.
-
-Punctuation Restoration
-
-DeepMultilingualPunctuation Model: Adds punctuation to raw ASR output, improving readability and enabling accurate sentence splitting.
-
-Sentence Segmentation
-
-The punctuated transcript is split into individual sentences for granular analysis.
-
-Sensitive Topic Classification
-
-FLAN-T5 Large (via Hugging Face Transformers): Each sentence is semantically classified into a user-provided list of sensitive topics.
-
-Toxicity Detection
-
-Unitary Toxic-BERT: Each sentence is analyzed for toxic language and assigned a toxicity score.
-
-Severity Assessment & Redaction
-
-Sentences are labeled as Safe, Warning, or Critical based on topic and toxicity.
-
-Sentences marked as Warning, Critical, or toxic are redacted for safe sharing.
-
-Justification Generation
-
-FLAN-T5 Large: Generates a concise explanation for each classification and redaction.
+-Input Acquisition
+ -Attach Audio/Video File: Users can select files in various formats (.mp3, .wav, .mp4, etc.).
+ -Record Live Audio: Users can record audio directly from their microphone.
+-Audio Extraction & Preprocessing
+ -FFmpeg: Extracts and converts audio from video files to a standardized format for transcription.
+-Speech-to-Text (ASR)
+ -Whisper Model: Transcribes audio to text locally, ensuring privacy and supporting multiple languages.
+ -This project uses the open-source Whisper transcription model from OpenAI, running locally via the Python package—not through any closed API service.
+-Punctuation Restoration
+ -DeepMultilingualPunctuation Model: Adds punctuation to raw ASR output, improving readability and enabling accurate sentence splitting.
+-Sentence Segmentation
+ -The punctuated transcript is split into individual sentences for granular analysis.
+-Sensitive Topic Classification
+ -FLAN-T5 Large (via Hugging Face Transformers): Each sentence is semantically classified into a user-provided list of sensitive topics.
+-Toxicity Detection
+ -Unitary Toxic-BERT: Each sentence is analyzed for toxic language and assigned a toxicity score.
+-Severity Assessment & Redaction
+ -Sentences are labeled as Safe, Warning, or Critical based on topic and toxicity.
+ -Sentences marked as Warning, Critical, or toxic are redacted for safe sharing.
+-Justification Generation
+ -FLAN-T5 Large: Generates a concise explanation for each classification and redaction.
 -Output & Export
  -Results (including original, redacted, topics, severity, toxicity, and justifications) are displayed in the GUI and can be exported as JSON.
 
 +---------------------+
-|   User Interface    | <---- Tkinter GUI (file select, record, analyze, save)
+|   User Interface    |
 +---------------------+
-           |
-           v
+      |
+      v
+      # Tkinter GUI (file select, record, analyze, save)
+
 +---------------------+
-|   Audio Input       | <---- Record audio/ Attach audio, video
+|    Audio Input      |
 +---------------------+
-           |
-           v
+      |
+      v
+      # Record audio / Attach audio, video
+
 +---------------------+
-|   Audio Extraction  | <---- FFmpeg
+|  Audio Extraction   |
 +---------------------+
-           |
-           v
+      |
+      v
+      # FFmpeg
+
 +---------------------+
-|   Speech-to-Text    | <---- Whisper (local ASR) (raw text)
+|  Speech-to-Text     |
 +---------------------+
-           |
-           v
-+---------------------+
-| Punctuation Restore | <---- DeepMultilingualPunctuation (to split to proper sentences)
-+---------------------+
-           |
-           v
+      |
+      v
+      # Whisper (local ASR) (raw text)
+
++-------------------------------+
+|   Punctuation Restoration     |
++-------------------------------+
+      |
+      v
+      # DeepMultilingualPunctuation (to split to proper sentences)
+
 +---------------------+
 | Sentence Splitting  |
 +---------------------+
-           |
-           v
+      |
+      v
+
 +---------------------+
-|   NLP Analysis      |
-|  - Topic Classify   | <---- FLAN-T5 (transformers)
-|  - Toxicity Score   | <---- Toxic-BERT
-|  - Severity Assign  |
-|  - Redaction        |
-|  - Justification    | <---- FLAN-T5
+|    NLP Analysis     |
 +---------------------+
-           |
-           v
+      |
+      v
+      # - Topic Classify: FLAN-T5 (transformers)
+      # - Toxicity Score: Toxic-BERT
+      # - Severity Assign
+      # - Redaction
+      # - Justification: FLAN-T5
+
 +---------------------+
-|   Results Output    | <---- Display in GUI, export as JSON
+|   Results Output    |
 +---------------------+
+      |
+      v
+      # Display in GUI, export as JSON
+
 
 ## Installation & Dependencies
 **Install Required Packages**
