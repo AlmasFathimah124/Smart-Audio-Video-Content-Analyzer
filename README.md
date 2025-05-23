@@ -166,38 +166,35 @@ Toxic-BERT: "unitary/toxic-bert"
 DeepMultilingualPunctuation
 
 ## Usage Guide
-Usage Guide (Jupyter Notebook)
-Follow these steps to analyze audio or video content for sensitive topics and toxicity using EchoFilter in a Jupyter notebook:
-
 1. Install Required Packages
 In a notebook cell, run:
-
-python
 !pip install sounddevice scipy numpy whisper deepmultilingualpunctuation transformers torch
-If you get an error for tkinter, you may need to install it via your system’s package manager (outside the notebook).
+If you get an error for tkinter, you may need to install it using your system’s package manager (outside the notebook).
 
 2. Import and Initialize
-Copy all the code from your notebook (including model loading and helper functions) into the first notebook cell.
-
-Run the cell to initialize all imports and models.
+Copy all necessary code (including model loading and helper functions) into the first notebook cell.
+Run this cell to initialize all imports and models.
 
 3. Analyze Audio or Video
 Attach Audio/Video File:
-Use the file dialog in your GUI (if you run the Tkinter app from a notebook cell), or use notebook code to specify the file path.
-
+Use a file dialog in your GUI (if running the Tkinter app from a notebook cell), or specify the file path directly in your notebook code.
 Record Live Audio:
-Use the provided function in your notebook to record and process audio.
+Use the provided function in your notebook to record and process audio from your microphone.
 
 4. View and Analyze the Transcript
 After processing, the transcript will be displayed in your notebook output or GUI window.
-
 Use the provided functions to:
- -Restore punctuation
- -Split into sentences
- -Classify sentences by topic
- -Detect toxicity
- -Redact sensitive/toxic sentences
- -Generate justifications
+Restore punctuation
+Split the transcript into sentences
+Classify sentences by topic
+Detect toxicity
+Redact sensitive/toxic sentences
+Generate justifications for each classification
+
+5. Review and Save Results
+Results will be displayed in the notebook output or GUI.
+Use the save_results_to_json() function (or equivalent) to export your analysis as a .json file.
+
 
 5. Review and Save Results
 Results will be displayed in the output area or GUI.
@@ -219,7 +216,7 @@ did you see the post on the internal forum about the CEOs political donations? t
    → Justification: The non-toxic label is for anxiety.
 
 **Testing & Evaluation**
-1. Functional Testing
+Functional Testing
 Sample Data:
 Use the provided sample transcript or your own audio/video files to test the full pipeline.
 
