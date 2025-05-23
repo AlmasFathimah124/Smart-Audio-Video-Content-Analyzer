@@ -150,15 +150,15 @@ This tool is ideal for anyone who needs to monitor and control the flow of sensi
       # Display in GUI, export as JSON
 
 ## Installation & Setup
--Prerequisites-
+Prerequisites
 Python 3.8+
 FFmpeg (for audio/video extraction)
 jupyter: pip install ffmpeg
 
--Install Python Dependencies
+Install Python Dependencies
 It’s recommended to use a virtual environment:
 
--Model Downloads
+Model Downloads
 The first time you run the app, Hugging Face and Whisper models will be downloaded automatically:
 Whisper ASR: "base" model (can be changed to "medium" or "large" for better accuracy)
 FLAN-T5: "google/flan-t5-large"
