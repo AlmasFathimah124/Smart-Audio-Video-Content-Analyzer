@@ -1,0 +1,73 @@
+🔧 Installation & Dependencies
+To run the Smart Audio Firewall, make sure you have the following tools and libraries installed:
+
+📦 Python Requirements
+bash
+Copy
+Edit
+pip install -r requirements.txt
+📄 requirements.txt
+text
+Copy
+Edit
+streamlit
+audiorecorder
+vosk
+pydub
+nltk
+transformers==4.40.1
+torch
+deepmultilingualpunctuation
+ffmpeg-python
+📁 External Requirements
+🗣️ Vosk Speech Recognition Model
+Download and extract the English Vosk model from:
+
+https://alphacephei.com/vosk/models
+
+For example:
+
+Copy
+Edit
+vosk-model-small-en-us-0.15/
+Place it here:
+
+makefile
+Copy
+Edit
+C:\Users\almas\Downloads\vosk-model-small-en-us-0.15
+Update this path in your script:
+
+python
+Copy
+Edit
+vosk_model = Model(r"C:\Users\almas\Downloads\vosk-model-small-en-us-0.15\vosk-model-small-en-us-0.15")
+🎵 Audio Tools
+🔄 FFmpeg (for audio conversion)
+Install FFmpeg and make sure it's in your system PATH.
+
+Download: https://ffmpeg.org/download.html
+
+To verify it's working:
+
+bash
+Copy
+Edit
+ffmpeg -version
+📚 NLTK Setup
+Ensure NLTK tokenizers are downloaded:
+
+python
+Copy
+Edit
+import nltk
+nltk.download('punkt')
+✅ Additional Notes
+Python ≥ 3.8 recommended
+
+If transformers errors out with TensorFlow, use:
+
+python
+Copy
+Edit
+os.environ["TRANSFORMERS_NO_TF"] = "1"
