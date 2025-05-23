@@ -1,0 +1,110 @@
+[
+  {
+    "sentence": "I am working in a company called ABC",
+    "matched_topic": "Salary",
+    "severity": "Safe",
+    "toxicity": "toxic",
+    "toxicity_score": 0.001,
+    "redacted_sentence": "I am working in a company called ABC",
+    "justification": "Salary is the amount of money you make for the work you do."
+  },
+  {
+    "sentence": "I have a salary of 100K",
+    "matched_topic": "Salary",
+    "severity": "Safe",
+    "toxicity": "toxic",
+    "toxicity_score": 0.005,
+    "redacted_sentence": "I have a salary of 100K",
+    "justification": "Salary is a measure of money earned. The higher the salary, the more toxic it is."
+  },
+  {
+    "sentence": "I have an employee at my company who is a very bad person",
+    "matched_topic": "Hate",
+    "severity": "Safe",
+    "toxicity": "toxic",
+    "toxicity_score": 0.205,
+    "redacted_sentence": "I have an employee at my company who is a very bad person",
+    "justification": "Hate is a very dangerous and toxic emotion."
+  },
+  {
+    "sentence": "I just hate him",
+    "matched_topic": "Hate",
+    "severity": "Warning",
+    "toxicity": "toxic",
+    "toxicity_score": 0.719,
+    "redacted_sentence": "[REDACTED]",
+    "justification": "Hate is a negative emotion that can be used to describe someone."
+  },
+  {
+    "sentence": "I don't like him at all",
+    "matched_topic": "Hate",
+    "severity": "Safe",
+    "toxicity": "toxic",
+    "toxicity_score": 0.043,
+    "redacted_sentence": "I don't like him at all",
+    "justification": "Hate is a feeling of disgust, disgust, or disgust."
+  },
+  {
+    "sentence": "If I get a chance, I am going to fire him away from our company because he is such a fraud and mental case",
+    "matched_topic": "Hate",
+    "severity": "Critical",
+    "toxicity": "toxic",
+    "toxicity_score": 0.87,
+    "redacted_sentence": "[REDACTED]",
+    "justification": "Hate is a form of extreme prejudice and is a form of toxicity."
+  },
+  {
+    "sentence": "I really don't like him at all",
+    "matched_topic": "Hate",
+    "severity": "Safe",
+    "toxicity": "toxic",
+    "toxicity_score": 0.015,
+    "redacted_sentence": "I really don't like him at all",
+    "justification": "Hate is a feeling of disgust, disgust, or disgust."
+  },
+  {
+    "sentence": "This is all a test",
+    "matched_topic": "Legal",
+    "severity": "Safe",
+    "toxicity": "toxic",
+    "toxicity_score": 0.003,
+    "redacted_sentence": "This is all a test",
+    "justification": "This is a legal test."
+  },
+  {
+    "sentence": "Also, I want to make sure that this is going to work for my Echo Filter UI",
+    "matched_topic": "Legal",
+    "severity": "Safe",
+    "toxicity": "toxic",
+    "toxicity_score": 0.002,
+    "redacted_sentence": "Also, I want to make sure that this is going to work for my Echo Filter UI",
+    "justification": "Legally, the substance is not harmful. It is a chemical that is used in the manufacture of many products."
+  },
+  {
+    "sentence": "There are no legal complications involved in this",
+    "matched_topic": "Legal",
+    "severity": "Safe",
+    "toxicity": "toxic",
+    "toxicity_score": 0.001,
+    "redacted_sentence": "There are no legal complications involved in this",
+    "justification": "Legal complications are rare."
+  },
+  {
+    "sentence": "There are no legal contracts at all, But this is something that I would like to discuss with my manager",
+    "matched_topic": "Legal",
+    "severity": "Safe",
+    "toxicity": "toxic",
+    "toxicity_score": 0.001,
+    "redacted_sentence": "There are no legal contracts at all, But this is something that I would like to discuss with my manager",
+    "justification": "Legal contracts are legally binding and are enforceable by law."
+  },
+  {
+    "sentence": "Thank you",
+    "matched_topic": "Legal",
+    "severity": "Safe",
+    "toxicity": "toxic",
+    "toxicity_score": 0.001,
+    "redacted_sentence": "Thank you",
+    "justification": "The word \"thank you\" is a legal term in the United States."
+  }
+]
