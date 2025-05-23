@@ -19,6 +19,23 @@ This tool helps protect private, sensitive, or inappropriate speech content in r
 - 🖥️ **GUI**: Easy-to-use interface built with Tkinter
 
 ---
+📦 Dependencies
+transformers >= 4.41.0
+
+torch
+
+openai-whisper
+
+deepmultilingualpunctuation
+
+scipy
+
+sounddevice
+
+ffmpeg
+
+tkinter (default with Python)
+
 
 ## 💻 Installation
 
