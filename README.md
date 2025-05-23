@@ -194,7 +194,7 @@ Generate justifications for each classification
 5. Review and Save Results
 Results will be displayed in the notebook output or GUI.
 Use the save_results_to_json() function (or equivalent) to export your analysis as a .json file.
-![output2.png](images/output2.png)
+![output2.png](images/output3.png)
 
 
 **Sample Output (JSON)**
