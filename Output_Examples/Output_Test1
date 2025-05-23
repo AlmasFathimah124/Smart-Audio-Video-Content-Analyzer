@@ -1,0 +1,92 @@
+[
+  {
+    "sentence": "Hi everyone",
+    "matched_topic": "Legal",
+    "severity": "Safe",
+    "toxicity": "non-toxic",
+    "toxicity_score": 0.001,
+    "redacted_sentence": "Hi everyone",
+    "justification": "The legal definition of a non-toxic substance is a substance that does not cause harm to the body."
+  },
+  {
+    "sentence": "my name is John and I have been working at X5Z Corporation for the past 5 years",
+    "matched_topic": "Salary",
+    "severity": "Safe",
+    "toxicity": "non-toxic",
+    "toxicity_score": 0.001,
+    "redacted_sentence": "my name is John and I have been working at X5Z Corporation for the past 5 years",
+    "justification": "Salary is a non-toxic, safe, and non-drug workplace."
+  },
+  {
+    "sentence": "My current salary is about 120k, which is pretty competitive in the market",
+    "matched_topic": "Salary",
+    "severity": "Safe",
+    "toxicity": "non-toxic",
+    "toxicity_score": 0.001,
+    "redacted_sentence": "My current salary is about 120k, which is pretty competitive in the market",
+    "justification": "Salary is a measure of a person's income. The higher the salary, the more competitive the job market is."
+  },
+  {
+    "sentence": "I recently had an employee who was constantly causing trouble and, frankly, I think he is a total fraud",
+    "matched_topic": "Legal",
+    "severity": "Warning",
+    "toxicity": "toxic",
+    "toxicity_score": 0.618,
+    "redacted_sentence": "[REDACTED]",
+    "justification": "The employee is a total fraud. The employee is a total fraud because he is a total fraud."
+  },
+  {
+    "sentence": "I just hate the way he talks to people",
+    "matched_topic": "Hate",
+    "severity": "Safe",
+    "toxicity": "non-toxic",
+    "toxicity_score": 0.117,
+    "redacted_sentence": "I just hate the way he talks to people",
+    "justification": "Hate is a negative emotion that can be expressed in a variety of ways. Hate is a negative emotion that can be expressed in a variety of ways."
+  },
+  {
+    "sentence": "it's incredibly disrespectful",
+    "matched_topic": "Hate",
+    "severity": "Safe",
+    "toxicity": "non-toxic",
+    "toxicity_score": 0.001,
+    "redacted_sentence": "it's incredibly disrespectful",
+    "justification": "Hate is a form of a negative emotion that is not harmful or harmful."
+  },
+  {
+    "sentence": "There are no legal contracts in place yet for the new hires, which is something I will bring up with HR",
+    "matched_topic": "Legal",
+    "severity": "Safe",
+    "toxicity": "non-toxic",
+    "toxicity_score": 0.001,
+    "redacted_sentence": "There are no legal contracts in place yet for the new hires, which is something I will bring up with HR",
+    "justification": "Legal contracts are a requirement for new hires. They are a legal document that must be in place before they can be employed."
+  },
+  {
+    "sentence": "Also, I want to ensure that none of this conversation violates our NDA policy",
+    "matched_topic": "Legal",
+    "severity": "Safe",
+    "toxicity": "non-toxic",
+    "toxicity_score": 0.002,
+    "redacted_sentence": "Also, I want to ensure that none of this conversation violates our NDA policy",
+    "justification": "Legally, the NDA is a legally binding agreement between the parties."
+  },
+  {
+    "sentence": "Honestly, I don't like him at all, but I try to stay professional",
+    "matched_topic": "Hate",
+    "severity": "Safe",
+    "toxicity": "non-toxic",
+    "toxicity_score": 0.002,
+    "redacted_sentence": "Honestly, I don't like him at all, but I try to stay professional",
+    "justification": "Hate is a negative emotion that is not harmful or harmful."
+  },
+  {
+    "sentence": "Anyway, this is just a test recording",
+    "matched_topic": "Legal",
+    "severity": "Safe",
+    "toxicity": "non-toxic",
+    "toxicity_score": 0.001,
+    "redacted_sentence": "Anyway, this is just a test recording",
+    "justification": "This is a legal test recording."
+  }
+]
