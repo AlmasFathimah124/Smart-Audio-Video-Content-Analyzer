@@ -148,7 +148,7 @@ This tool is ideal for anyone who needs to monitor and control the flow of sensi
 ## Installation & Dependencies
 **Install Required Packages**
  -Option 1: In Your Terminal or Command Prompt
- -pip install sounddevice scipy numpy whisper deepmultilingualpunctuation transformers torch transformers ffmpeg
+ pip install sounddevice scipy numpy whisper deepmultilingualpunctuation transformers torch transformers ffmpeg
  -Option 2: Directly in a Jupyter Notebook Cell
  -!pip install sounddevice scipy numpy whisper deepmultilingualpunctuation transformers torch transformers
  -Note:
