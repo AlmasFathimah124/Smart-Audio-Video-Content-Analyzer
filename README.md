@@ -71,26 +71,46 @@ This tool is ideal for anyone who needs to monitor and control the flow of sensi
 
 ## System Architecture & Design
 **High-Level Workflow**
--Input Acquisition
- -Attach Audio/Video File: Users can select files in various formats (.mp3, .wav, .mp4, etc.).
- -Record Live Audio: Users can record audio directly from their microphone.
--Audio Extraction & Preprocessing
- -FFmpeg: Extracts and converts audio from video files to a standardized format for transcription.
--Speech-to-Text (ASR)
- -Whisper Model: Transcribes audio to text locally, ensuring privacy and supporting multiple languages.
--Punctuation Restoration
- -DeepMultilingualPunctuation Model: Adds punctuation to raw ASR output, improving readability and enabling accurate sentence splitting.
--Sentence Segmentation
- -The punctuated transcript is split into individual sentences for granular analysis.
--Sensitive Topic Classification
- -FLAN-T5 Large (via Hugging Face Transformers): Each sentence is semantically classified into a user-provided list of sensitive topics.
--Toxicity Detection
- -Unitary Toxic-BERT: Each sentence is analyzed for toxic language and assigned a toxicity score.
--Severity Assessment & Redaction
- -Sentences are labeled as Safe, Warning, or Critical based on topic and toxicity.
- -Sentences marked as Warning, Critical, or toxic are redacted for safe sharing.
--Justification Generation
- -FLAN-T5 Large: Generates a concise explanation for each classification and redaction.
+System Workflow
+Input Acquisition
+
+Attach Audio/Video File: Users can select files in various formats (.mp3, .wav, .mp4, etc.).
+
+Record Live Audio: Users can record audio directly from their microphone.
+
+Audio Extraction & Preprocessing
+
+FFmpeg: Extracts and converts audio from video files to a standardized format for transcription.
+
+Speech-to-Text (ASR)
+
+Whisper Model: Transcribes audio to text locally, ensuring privacy and supporting multiple languages.
+
+Punctuation Restoration
+
+DeepMultilingualPunctuation Model: Adds punctuation to raw ASR output, improving readability and enabling accurate sentence splitting.
+
+Sentence Segmentation
+
+The punctuated transcript is split into individual sentences for granular analysis.
+
+Sensitive Topic Classification
+
+FLAN-T5 Large (via Hugging Face Transformers): Each sentence is semantically classified into a user-provided list of sensitive topics.
+
+Toxicity Detection
+
+Unitary Toxic-BERT: Each sentence is analyzed for toxic language and assigned a toxicity score.
+
+Severity Assessment & Redaction
+
+Sentences are labeled as Safe, Warning, or Critical based on topic and toxicity.
+
+Sentences marked as Warning, Critical, or toxic are redacted for safe sharing.
+
+Justification Generation
+
+FLAN-T5 Large: Generates a concise explanation for each classification and redaction.
 -Output & Export
  -Results (including original, redacted, topics, severity, toxicity, and justifications) are displayed in the GUI and can be exported as JSON.
 
