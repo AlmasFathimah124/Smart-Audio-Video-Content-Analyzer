@@ -166,7 +166,7 @@ Toxic-BERT: "unitary/toxic-bert"
 DeepMultilingualPunctuation
 
 **Usage Guide**
-🚀 Usage Guide (Jupyter Notebook)
+Usage Guide (Jupyter Notebook)
 Follow these steps to analyze audio or video content for sensitive topics and toxicity using EchoFilter in a Jupyter notebook:
 
 1. Install Required Packages
@@ -192,34 +192,17 @@ Use the provided function in your notebook to record and process audio.
 After processing, the transcript will be displayed in your notebook output or GUI window.
 
 Use the provided functions to:
-
-Restore punctuation
-
-Split into sentences
-
-Classify sentences by topic
-
-Detect toxicity
-
-Redact sensitive/toxic sentences
-
-Generate justifications
+ -Restore punctuation
+ -Split into sentences
+ -Classify sentences by topic
+ -Detect toxicity
+ -Redact sensitive/toxic sentences
+ -Generate justifications
 
 5. Review and Save Results
 Results will be displayed in the output area or GUI.
 
 Use the save_results_to_json() function to export your analysis as a .json file.
-
-6. Tips & Troubleshooting
-If you see errors about missing packages, run !pip install package-name in a notebook cell.
-
-If you see errors about missing models, check your internet connection.
-
-If you see tkinter errors, try running the script in a standard Python environment (outside Jupyter), as GUIs may not work in all notebook setups.
-
-Note:
-
-If you want to use the full Tkinter GUI, it is best to run your script as a standard Python script (python your_script.py) from the terminal, since GUIs are not always supported in Jupyter notebooks.
 
 **Sample Output (JSON)**
 📌 Enter sensitive topic labels (comma-separated):
