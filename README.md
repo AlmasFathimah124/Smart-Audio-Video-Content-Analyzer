@@ -118,7 +118,7 @@ This tool is ideal for anyone who needs to monitor and control the flow of sensi
 +-------------------------------+
       |
       v
-      # DeepMultilingualPunctuation (to split to proper sentences)
+      # DeepMultilingualPunctuation
 
 +---------------------+
 | Sentence Splitting  |
