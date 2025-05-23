@@ -205,17 +205,14 @@ Results will be displayed in the output area or GUI.
 Use the save_results_to_json() function to export your analysis as a .json file.
 
 **Sample Output (JSON)**
-📌 Enter sensitive topic labels (comma-separated):
+Enter sensitive topic labels (comma-separated):
  Mental Health, Depression, Anxiety, NDA, Privacy, Company Policy, Politics, Government, Reform, Harassment, Workplace, Ethics, Data Protection, Security, Environment, Climate Change, Sustainability, Rumors, Job Security, Humor, Casual, Social, Health, Medicine, Public Safety, Discrimination, Social Justice
-
-🥾 Cleaned Text:
+Cleaned Text:
 did you see the post on the internal forum about the CEOs political donations? things are getting tense.
-
 🔹 [REDACTED]
    → Original: Did you see the post on the internal forum about the CEOs political donations?
    → Topic: Politics | Severity: Warning | Score: 0.001
    → Justification: The post on the internal forum was about the CEOs political donations. The post was a warning.
-
 🔹 [REDACTED]
    → Original: Things are getting tense.
    → Topic: Anxiety | Severity: Warning | Score: 0.001
